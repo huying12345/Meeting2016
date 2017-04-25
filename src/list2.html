@@ -1,0 +1,39 @@
+<div class="swiper-container gallery-top">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" >
+							<img src="assets/img/huiyi/2.png" >
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/huiyi/3.png" >							
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/huiyi/4.png" >							
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/huiyi/5.png" >							
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/huiyi/6.png" >							
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/huiyi/7.png" >							
+						</div>						
+					</div>
+					<!-- Add Arrows -->
+					<!--<div class="swiper-button-next swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>-->
+				</div>
+
+
+
+<script> 
+var Swiper1 = new Swiper('#swiper-container1',{
+})
+var Swiper2 = new Swiper('#swiper-container2',{
+})
+Swiper1.params.control = Swiper2;//需要在Swiper2初始化后，Swiper1控制Swiper2
+Swiper2.params.control = Swiper1;//需要在Swiper1初始化后，Swiper2控制Swiper1
+var Swiper3 = new Swiper('#swiper-container3',{
+control: [Swiper1, Swiper2],//控制前面两个Swiper
+})
+</script>

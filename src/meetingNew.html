@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>会议新闻</title>
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+	</head>
+
+	<body ontouchstart>
+		<div class="weui_tab" id="New">
+			<!--ko if: InfoList().length==0-->
+			<img src="UploadFiles/2017/01/06/20170106.jpg" name="pb1" class="pb1" style="width:100%;height:100%;">
+			<!--/ko-->
+			<!--<div id="met">-->
+				<!--ko foreach: InfoList-->
+				<a data-bind="attr:{href:'meetingNew_info.html?InfoID='+InfoID}" class="weui_panel">
+					<div class="weui_panel_hd">
+						<img src="assets/img/logo_r1_c1.png" style="height: 25px;  width: 25px;position: absolute;">&nbsp;
+						<span data-bind="text:Title" style="height: 28px; font-size: 0.75rem; margin-left: 24px;line-height: 25px;white-space: nowrap;position: absolute;">会议标题</span>
+						<br>
+						<span data-bind="text:UpdateTime" style="position: relative; top: 2px; font-size: 0.75rem; ">2017-01-04 16:21:53</span>
+						<input type="hidden" data-bind="attr:{value:HtmlContent,class:'id_'+InfoID}">
+
+					</div>
+					<div class="weui_panel_bd">
+						<div class="weui_media_box weui_media_text">
+							<p class="weui_media_info">
+								<img data-bind="attr:{src:FilePath}" alt="暂无图片" style="width: 100%; height: 240px;">
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<!--/ko-->
+			<!--</div>-->
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var newViewModel = new NewViewModel();
+				ko.applyBindings(newViewModel, document.getElementById("New"));
+				newViewModel.init("1");
+			});
+		</script>
+	</body>
+
+</html>

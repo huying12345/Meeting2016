@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="MobileOptimized" content="320" />
+	<link rel="import" href="include/head.html?__inline">
+	
+	<link href="./assets/css/air_quality.css" rel="stylesheet" />
+	<script src="./assets/libs/jquery/2x/jquery.min.js"></script>
+	<!--<script src="./assets/js/template.js"></script>-->
+
+	<head>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		$(function() {
+			jQuery("#bg_imgs").addClass("img_right");
+			var kqViewModel = new KQViewModel();
+			ko.applyBindings(kqViewModel, document.getElementById("Data"));
+			kqViewModel.init();
+		});
+	</script>
+
+	<body>
+		<div class="weui_tab" id="AQIList" style="height: 100%; background-size: 100% 100%;background-attachment: fixed;background-color: #5DBCDC;font-size: 12px;color: #fff;">
+			<div class="weui_tab_bd">
+				<div class="top">
+					<div class="top_title">
+						<a href="synopsis.html"><i class="iconfont icon-back" style="color: white; float: left;font-size: 25px;"></i></a>
+						上海市空气质量实况<br />
+					</div>
+					<!--ko foreach: listForecast-->
+
+					<div style=" height:20px; ">
+						<p class="top_p">发布时间:<span class="adt" data-bind="text:DataTime"></span></p>
+					</div>
+					<div class="top_top">
+						<div class="top_topleft" id="left_aqi">
+							<table class="top_table" id="">
+								<tr class="tr_tab">
+									<td class="font1">
+										AQI:
+									</td>
+									<td class="font2">
+										<span id="aqispan" data-bind="text:AQI"></span>
+									</td>
+									<td class="font3">
+										<span data-bind="text:GradeText"></span><br />
+										<span data-bind="text:Grade"></span>级
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="bg_tr" id="progressbar">
+										<span>
+									<img alt="img" src="./assets/img/pointer.png" class="imgs"/></span>
+									</td>
+								</tr>
+							</table>
+
+							<table class="top_table1" id="wrw">
+								<tr>
+									<td>
+										<span class="table1_span">首要污染物</span>&nbsp;&nbsp;<span class="fist">PM2.5</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="table1_span">对健康影响</span><br />
+										<span data-bind="text:GetAqi(AQI,1)"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="table1_span">建议措施</span><br />
+										<span data-bind="text:GetAqi(AQI,2)"></span>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="top_topright" id="right_aqi">
+							<table class="top_table" id="bg_imgs">
+								<tr>
+									<td>
+									</td>
+								</tr>
+							</table>
+							<table class="top_rightTable" id="rt_aqi">
+								<thead class="right_thead">
+									<tr>
+										<td colspan="2" class="img_top">各项污染物浓度
+										</td>
+									</tr>
+									<tr>
+										<td class="thead_textleft">PM<sub>2.5</sub>:</td>
+										<td>&nbsp;<span data-bind="text:PM25"></span>ug/m³
+										</td>
+									</tr>
+									<tr>
+										<td class="thead_textleft">PM<sub>10</sub>:</td>
+										<td>&nbsp;<span data-bind="text:PM10"></span>ug/m³
+										</td>
+									</tr>
+									<tr>
+										<td class="thead_textleft">NO₂:</td>
+										<td>&nbsp;<span data-bind="text:NO2"></span>ug/m³
+										</td>
+									</tr>
+									<tr>
+										<td class="thead_textleft">SO₂:</td>
+										<td>&nbsp;<span data-bind="text:SO2"></span>ug/m³
+										</td>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div style=" margin:0px auto; text-align:center; font-size:14px; font-weight:bold; width:99%; line-height:245px;" id="dq_text">当前时间暂无数据</div>
+					</div>
+
+					<!--/ko-->
+				</div>
+				<div class="foot">
+					<div class="foot_class"> 上海市空气质量预报</div>
+					<div style=" height:20px;">
+
+						<p class="top_p" style="color:#479cbb;">发布时间:<span class="top_P_date"></span></p>
+
+					</div>
+					<table class="foot_table">
+						<thead class="table_tr">
+						</thead>
+						<tbody class="t_tbody">
+							<!--ko foreach: airForecast-->
+							<tr>
+								<td data-bind="html:(time.replace('\n','<br />'))">时间</td>
+								<td data-bind="text:aqi">空气质量等级</td>
+								<td class="data_first" data-bind="text:first">首要污染物</td>
+								<td data-bind="text:quality">AQI</td>
+							</tr>
+							<!--/ko-->
+						</tbody>
+					</table>
+					<p style="line-height: 40px; color: #479cbb; font-size:12px;width:100%;text-align:right;">上海中心气象台&nbsp;上海市环境监测中心&nbsp;联合发布</p>
+				</div>
+			</div>
+		</div>
+		<link rel="import" href="include/footjs.html?__inline">
+	</body>
+</html>

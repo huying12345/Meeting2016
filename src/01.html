@@ -1,0 +1,24 @@
+<div id="AQIList1" class="weui_tab_bd" style="background-color:none;color:#fff;">
+	<div class="foot" style="background: none;">
+		<div class="foot_class" style="background:none;">上海市空气质量预报</div>
+		
+		<div style="height:20px;">发布时间：
+			<span style="color:#fff;font-size:12px;float:right;" class="top_P_date" ></span>
+		</div>
+		<table class="foot_table">
+			<thead class="table_tr">
+			</thead>
+			<tbody class="t_tbody">
+				<!--ko foreach: airForecast-->
+				<tr>
+					<td data-bind="html:(time.replace('\n','<br />'))">时间</td>
+					<td data-bind="text:aqi">空气质量等级</td>
+					<td class="data_first"  data-bind="text:first">首要污染物</td>
+					<td  data-bind="text:quality">AQI</td>
+				</tr>
+				<!--/ko-->
+			</tbody>
+		</table>
+		<p style="font-size:12px;width:100%;text-align:right;">上海中心气象台&nbsp;上海市环境监测中心&nbsp;联合发布</p>
+	</div>
+</div>

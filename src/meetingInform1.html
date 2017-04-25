@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>会议通知</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+	</head>
+
+	<body ontouchstart>
+		<div class="weui_tab" id="Inform1">
+			<div class="weui_tab_bd">
+				<div class="informcontent">
+					<!--ko foreach: list-->
+					<div class="title">
+						<i class="iconfont icon-shou"></i>
+						<span style="font-size:15px;font-weight:700;text-align: center;" data-bind="text:Title"></span><br/>
+						<img src="assets/img/logo_r1_c1.png" style="width: 25px; margin-top: 10px;margin-left: 10px;" />
+						<span style="position: relative;top:-7px;font-size: 14px;">会务组</span><br/>
+						<span style="margin-left:35px;font-size: 12px;display: block;margin-top: -5px;" data-bind="text:UpdateTime"></span>
+					</div>
+					<div class="swiper-container" style="height:87%;width: 100%;z-index: 0; ">
+						<div class="swiper-wrapper" style="width: 100%; height: 100%;">
+
+							<!--ko foreach: FileList.split("|") -->
+							<div class="swiper-slide ">
+								<img data-bind="attr:{src:$data.trim()}" name="pb1" class="pb1" style="width:100%;height:100%;" />
+							</div>
+							<!--/ko-->
+						</div>
+					</div>
+					<!--/ko-->
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script src="http://jqweui.com/dist/js/swiper.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var id=GetQueryString("InfoID");
+				var programmeViewModel = new ProgrammeViewModel();
+				ko.applyBindings(programmeViewModel, document.getElementById("Inform1"));
+				programmeViewModel.init(id);
+			});
+		</script>
+	</body>
+
+</html>

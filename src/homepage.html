@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+	</head>
+
+	<body style="background: #F8F7F8;">
+		<div class="weui_tab" id="homepage">
+			<div class="weui_tab_bd" style="background:#F8F7F8 none repeat scroll 0 0;">
+				<div id="homepage">
+					<div class="top">
+						<img alt="img" class="iconfont icon-shanghaiqixiangjulogo" src="assets/img/logo_r1_c1.png" />
+						<!--<i class="iconfont icon-shanghaiqixiangjulogo"></i>-->
+						<div style="width: 83%; float: right; ">
+							<p class="p1">2017年全国气象局长会议</p>
+							<p class="p2">2017 national meeting for meteorological bureau directors</p>
+						</div>
+						<p class="p3">2017年1月12日--13日&nbsp;&nbsp;主办：中国气象局&nbsp;&nbsp;承办：上海市气象局</p>
+					</div>
+					<div class="border_bottom">
+						<div class="txtScroll-top">
+							<div class="bd">
+								
+								<ul class="infoList" >
+									<!--ko foreach: InfoList-->
+									<li>
+										<a  data-bind="attr:{href:'meetingInform1.html?InfoID='+InfoID}"   class="gay" >
+											<img alt="img" src="assets/img/tz.png" style="height: 28px; width: 22px;position: absolute;">
+											<span data-bind="text:Title" style="height: 28px; margin-left: 24px;"></span>
+										</a>
+									</li>
+									<!--/ko-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(function() {
+							var newViewModel = new NewViewModel();
+					ko.applyBindings(newViewModel, document.getElementById("homepage"));
+					newViewModel.init("5");
+						});
+						$(window).load(function(){
+		    					jQuery(".txtScroll-top").slide({
+									titCell: ".hd ul",
+									mainCell: ".bd ul",
+									autoPage: true,
+									effect: "topLoop",
+									autoPlay: true,
+									vis: 1,
+									easing: "easeInBack"
+								});
+
+						});
+						
+					</script>
+
+					<div class="weui_panel weui_panel_access">
+						<div class="weui_panel_hd">会议安排</div>
+						<div class="weui_panel_bd">
+							<div class="weui_grids">
+								<a href="programme.html" class="weui_grid js_grid" data-id="button">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-richeng" style="color:black;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会议日程
+									</p>
+								</a>
+								<a href="grouplist.html" class="weui_grid js_grid" data-id="cell">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-people" style="color:#FB4D35;"></i>
+									</div>
+									<p class="weui_grid_label">
+										分组名单
+									</p>
+								</a>
+								<a href="conventioner.html" class="weui_grid js_grid" data-id="toast">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-distinguished" style="color:#5CB9F6;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会议代表
+									</p>
+								</a>
+								<a href="Gongzuo.html" class="weui_grid js_grid" data-id="dialog">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-552cc4d25879a" style="color:#29BE0F;"></i>
+									</div>
+									<p class="weui_grid_label">
+										工作人员
+									</p>
+								</a>
+								<a href="venueSeating.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-huiyi" style="color:#A45BBF;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会场座位
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="weui_panel weui_panel_access">
+						<div class="weui_panel_hd">会务服务</div>
+						<div class="weui_panel_bd">
+							<div class="weui_grids">
+								<a href="shuttleArrangement.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-bus" style="color:#F98D45;"></i>
+									</div>
+									<p class="weui_grid_label">
+										接送安排
+									</p>
+								</a>
+								<a href="visitArrangement.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-mianfeilvyoujiaotongtu" style="color:#29C10E;"></i>
+									</div>
+									<p class="weui_grid_label">
+										参观安排
+									</p>
+								</a>
+								<a href="Matter.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-zhuyi" style="color:#FD6955;"></i>
+									</div>
+									<p class="weui_grid_label">
+										注意事项
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="weui_panel weui_panel_access">
+						<div class="weui_panel_hd">&nbsp;</div>
+						<div class="weui_panel_bd">
+							<div class="weui_grids">
+								<a href="meetingInform.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-tongzhi" style="color:#FB6C6A;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会议通知
+									</p>
+								</a>
+								<a href="synopsis.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-tianqi" style="color:#08AEFF;"></i>
+									</div>
+									<p class="weui_grid_label">
+										天气预报
+									</p>
+								</a>
+								<a href="meetingNew.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-icon02" style="color:#0CA7F8;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会议新闻
+									</p>
+								</a>
+								<a href="meetingData.html" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-ziliao" style="color:#38448B;"></i>
+									</div>
+									<p class="weui_grid_label">
+										会议材料
+									</p>
+								</a>
+								<a href="synopsis.html?id=tab2" class="weui_grid js_grid" data-id="progress">
+									<div class="weui_grid_icon">
+										<i class="iconfont icon-iconfont12503" style="color:#08AEFF;"></i>
+									</div>
+									<p class="weui_grid_label">
+										主办简介
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--<link rel="import" href="include/footer.html?__inline">-->
+		</div>
+		
+	</body>
+
+</html>

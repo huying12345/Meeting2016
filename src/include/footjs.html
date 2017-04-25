@@ -1,0 +1,22 @@
+<script src="./assets/libs/jquery/2x/jquery.min.js"></script>
+<script src="./assets/libs/echarts/echarts.common.min.js"></script>
+<script src="./assets/libs/jquery-weui/js/jquery-weui.min.js"></script>
+<script src="./assets/libs/underscore/underscore-min.js"></script>
+<script src="./assets/libs/knockout/knockout.min.js"></script>
+<script src="./assets/libs/backbone/backbone-min.js"></script>
+<script src="./assets/libs/knockback/knockback.min.js"></script>
+<script src="./assets/libs/jquery.cookie/jquery.cookie.js"></script>
+
+<script src="./assets/libs/swiper/swiper.jquery.min.js"></script>
+<script src="./assets/libs/jquery-weui/js/city-picker.min.js"></script>
+<script src="../assets/libs/jquery.SuperSlide.2.1.1.source.js" ></script>
+<script src="./assets/libs/fastclick/fastclick.js"></script>
+<script src="./assets/app.min.js?20170111"></script>
+<script type="text/javascript">
+    $(function (){
+        FastClick.attach(document.body);
+    });	
+	$("#footer a.weui_tabbar_item").click(function() {
+		$.cookie('__isfooter',$(this).text());
+	});		
+</script>

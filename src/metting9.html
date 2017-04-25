@@ -1,0 +1,70 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>会议</title>
+		<link rel="import" href="include/head.html?__inline">
+
+	</head>
+	<body onload="load()">
+		<div class="weui_tab" id="metting9">
+			<div class="weui_tab_bd">
+				<div class="swiper-container"> 
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<link rel="import" href="metting.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting1.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting2.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting3.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting4.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting5.html?__inline">
+						</div>
+						<div class="swiper-slide">
+							<link rel="import" href="metting6.html?__inline">
+						</div>
+
+						<div class="swiper-slide">
+							<link rel="import" href="metting7.html?__inline">
+						</div>
+					</div>
+					<div class="swiper-pagination" style="text-align: right; ">
+					</div>
+				</div> 
+				<link rel="import" href="include/footjs.html?__inline">
+				<script> 
+					var mySwiper = new Swiper('.swiper-container', {
+						//autoplay: 5000, //可选选项，自动滑动
+						direction: 'vertical',
+						effect: 'fade',
+						mousewheelControl: true,
+						paginationType: 'fraction',
+						mousewheelForceToAxis: true, //鼠标滚动
+						zoom: true, //双击slide会放大，并且在手机端可双指触摸缩放。
+						resistanceRatio: 0.9, //边缘抵抗力的大小比例。
+						pagination: '.swiper-pagination',
+						paginationClickable: true,
+						direction: 'vertical',
+						paginationType: 'fraction',
+						paginationFractionRender: function(swiper, currentClassName, totalClassName) {
+							return '<span class="' + currentClassName + '"></span>' +
+								' / ' +
+								'<span class="' + totalClassName + '"></span> &nbsp;';
+						}
+					})
+					function mySwiper() {
+						mySwiper.slideNext(); //下一页
+					}
+				</script>
+			</div>
+		</div>
+	</body>
+</html>

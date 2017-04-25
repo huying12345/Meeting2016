@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>会议通知</title>
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+	</head>
+	<body ontouchstart>
+		<div class="weui_tab" id="Inform">
+			<div class="weui_tab_bd">
+				<div class="content">
+					<div class="weui_search_bar" id="search_bar">
+						<form class="weui_search_outer">
+							<div class="weui_search_inner">
+								<i class="weui_icon_search"></i>
+								<input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>
+								<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+							</div>
+							<label for="search_input" class="weui_search_text" id="search_text">
+					      <i class="weui_icon_search"></i>
+					      <span>搜索</span>
+					    </label>
+						</form>
+						<a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+					</div>
+					<div class="lastNew">
+						<i class="iconfont icon-tongzhi1"></i><span>最新通知</span>
+					</div>
+					<!--ko foreach: InfoList-->
+					<div class="weui_cells">
+						<a   data-bind="attr:{href:'meetingInform1.html?InfoID='+InfoID}" class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<p><sup class="iconfont icon-circle"></sup>
+								<span data-bind="text:Title"></span></p>
+							</div>
+							<div class="weui_cell_ft">
+								<p></p>
+								<p  data-bind="text:UpdateTime">2016-12-12</p>
+							</div>
+						</a>
+					</div>
+					<!--/ko-->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+					var newViewModel = new NewViewModel();
+					ko.applyBindings(newViewModel, document.getElementById("Inform"));
+					newViewModel.init("5");
+				});
+		</script>
+	</body>
+</html>

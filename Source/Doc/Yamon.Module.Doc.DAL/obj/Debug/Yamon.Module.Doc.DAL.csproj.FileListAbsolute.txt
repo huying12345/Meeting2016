@@ -1,0 +1,17 @@
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Module.Doc.DAL.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Module.Doc.DAL.pdb
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Framework.Common.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Framework.DAL.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Framework.DBUtility.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Framework.Words.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Module.Common.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Module.Doc.Entity.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Framework.Log4Net.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Aspose.Words.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\log4net.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Yamon.Module.Doc.Entity.pdb
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\obj\Debug\Yamon.Module.Doc.DAL.csprojResolveAssemblyReference.cache
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\obj\Debug\Yamon.Module.Doc.DAL.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.DAL\obj\Debug\Yamon.Module.Doc.DAL.pdb

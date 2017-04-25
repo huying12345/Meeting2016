@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分组名单</title>
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body id="grouplist">
+		<div class="swiper-container swiper-container-horizontal" id="swiper-container2" style="z-index: 0;">
+			<div class="swiper-wrapper">
+				<!--ko foreach: list-->
+				<!--ko foreach: Title.split("|") -->
+				<div class="swiper-slide ">
+					<span data-bind="text:$data.trim()"></span>
+				</div>
+				<!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+		<div class="swiper-container swiper-container-horizontal" id="swiper-container3" style="z-index: 0;">
+			<div class="swiper-wrapper">
+				<!--ko foreach: list-->
+				<!--ko foreach: FileList.split("|") -->
+				<div class="swiper-slide ">
+					<img data-bind="attr:{src:$data.trim()}" name="pb1" class="pb1" style="width:100%;height:100%;" />
+				</div>
+				<!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+
+		<script src="http://jqweui.com/dist/js/swiper.js"></script>
+		<script>
+			$(function() {
+				var programmeViewModel = new ProgrammeViewModel();
+				ko.applyBindings(programmeViewModel);
+				programmeViewModel.init("8");
+			});
+			window.onload = function() {
+				setTimeout(function() {
+					var imgObj = document.getElementsByName('pb1'); //获取图文中所有的img标签对象
+
+					for(var i = 0; i < imgObj.length; i++) {
+						imgs.push(imgObj[i].src);
+					}
+					var pb1 = $.photoBrowser({
+						items: imgs,
+						initialSlide: 3,
+						onSlideChange: function(index) {
+							console.log(this, index);
+						},
+						onOpen: function(index) {
+							console.log("onOpen", this);
+						},
+						onClose: function() {
+							console.log("onClose", this);
+						}
+					});
+					$(".pb1").click(function() {
+						pb1.open();
+						//						$(".swiper-wrapper").css("display","none");
+					});
+
+					for(var i = 0; i < imgObj.length; i++) {
+						imgObj[i].onclick = (function(n) {
+							return function() {
+								pb1.open('initialSlide', n);
+							}
+						})(i)
+					}
+
+					var mySwiper2 = new Swiper('#swiper-container2', {
+						watchSlidesProgress: true,
+						watchSlidesVisibility: true,
+						slidesPerView: 3,
+						onTap: function() {
+							mySwiper3.slideTo(mySwiper2.clickedIndex)
+						}
+					})
+					var mySwiper3 = new Swiper('#swiper-container3', {
+						onSlideChangeStart: function() {
+							updateNavPosition()
+						}
+					})
+
+					function updateNavPosition() {
+						$('#swiper-container2 .active-nav').removeClass('active-nav')
+						var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+						if(!activeNav.hasClass('swiper-slide-visible')) {
+							console.log(1);
+							if(activeNav.index() > mySwiper2.activeIndex) {
+								console.log(2);
+								var thumbsPerNav = Math.floor(mySwiper2.width / activeNav.width()) - 1
+								mySwiper2.slideTo(activeNav.index() - thumbsPerNav)
+							} else {
+								console.log(3);
+								mySwiper2.slideTo(activeNav.index())
+							}
+						}
+					}
+				}, 100)
+			}
+		</script>
+	</body>
+
+</html>

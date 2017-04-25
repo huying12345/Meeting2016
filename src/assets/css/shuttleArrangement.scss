@@ -1,0 +1,55 @@
+#Arrangement {
+    height: 100%;
+    .weui_navbar_item {
+        padding: 3px 0;
+    }
+    .weui_navbar {
+//      margin-top: 60px;
+        border-top: 1px solid #888888;
+        border-bottom: 1px solid #888888;
+    }
+    .weui_tab_bd {
+        height: 100%;
+        position: relative;
+        .weui_tab_bd_item{
+            height: 100%;
+        }
+        table,
+        tbody {
+            margin-top: 56px;
+            height: 93%;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            tr {
+                td {
+                    font-size: 15px;
+                    padding:0px;
+                    i {
+                        color: #69B344;
+                    }
+                }
+                .bureau,
+                .manager,
+                .other {
+                    background: #5B666B;
+                    a{
+                        color: #60A645;
+                    }
+                }
+                .yellow {
+                    width: 15%;
+                    background: #F18C13;
+                }
+                .bureau {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+#map{
+    .showImg{
+        width: 100%;
+    }
+}

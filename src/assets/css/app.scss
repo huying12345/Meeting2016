@@ -1,0 +1,156 @@
+
+.weui_tab_bd{
+    padding-bottom: 0px  !important;
+}
+#homepage {
+    .weui_grid::before{
+        border-bottom: none;
+    border-right: none;
+    }
+    ._isfooter{
+        .iconfont{
+            color: #09bb07;   
+        } 
+        p.weui_tabbar_label{
+            color: #09bb07;   
+        }
+    }
+    .weui_grid_icon .iconfont{
+        font-size: 30px; line-height: 30px;
+    }
+    background: #F8F7F8;
+    .top {
+        display: block;
+        height: 100px;
+        color: #2D5A9D;
+        background-image: url(../img/fw_r1_c1.png);
+        text-align: center;
+        padding-top: 10px;
+    }
+    .icon-shanghaiqixiangjulogo {
+         display: block;
+    font-size: 2.7rem;
+    margin-left: 5%;
+    padding-top:10px;
+    position: absolute;
+    width: 13%;
+    }
+    .p1 {
+        font-size: 0.9rem;
+        padding-top: 12px;
+    }
+    .p2 {
+        font-size: 0.47rem;
+        padding-top: 5px;
+    }
+    .p3 {
+        font-size: 0.53rem;
+        padding-top: 1rem;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+    .txtScroll-top {
+        height: 35px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+    }
+      
+    .txtScroll-top .bd {
+//      background: rgba(0, 0, 0, 0) url(../img/tz.png) no-repeat scroll 4px 7px;
+        float: left;
+        overflow: hidden; //  padding: 5px 5px 5px 22px;
+        width: 100%;height: 100%;
+    }
+    .tempWrap {
+//      margin: 5px 0 0 26px;
+    }
+    .txtScroll-top .infoList li {
+        height: 30px;
+        line-height: 32px;
+        font-size: 14px;
+        list-style-type:none;
+        a {
+            color: black;
+            white-space: nowrap;
+        }
+    }
+    .headerbar h1 {
+        color: #fff;
+        font-size: 19px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 100%;
+        font-weight: normal;
+    }
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-family: "helvetica neue",arial,"hiragino sans gb",stheiti,"wenquanyi micro hei",微软雅黑,宋体,sans-serif;
+    }
+    body {
+        color: #555;
+        font-size: 13px;
+    }
+    body {
+        font-size: 16px;
+    }
+    body {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.6;
+    }
+    html {
+        font-size: 20px;
+    }
+    .txtScroll-top .hd {
+        float: left;
+        height: 30px;
+        overflow: hidden;
+        padding: 0 10px;
+        width: 50px;
+    }
+    [class*="weui-col-"] {
+//      border: 1px solid #ccc;
+        height: 70px;
+        line-height: 40px;
+        text-align: center;
+        background: #FFFFFF;
+    }
+    .weui-row {
+        position: relative;
+        margin: 10px;
+        a {
+            position: relative;
+            color: black;
+            margin: 0 auto;
+            line-height: 70px;
+        }
+    }
+    .weui-row .iconfont {
+        font-size: 2rem;
+        margin: 0 atuo;
+        float: right;
+        padding-right: 5px;
+        color: black;
+    }
+    .border_bottom {
+        margin-bottom: -10px;
+        width: 100%;
+    }
+}
+
+.header_top{
+    height: 60px;   
+}

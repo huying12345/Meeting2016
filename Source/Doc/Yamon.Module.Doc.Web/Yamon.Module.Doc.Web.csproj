@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8121B511-27EE-4551-B0F5-4036E7F866FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yamon.Module.Doc.Web.Controllers.Controllers</RootNamespace>
+    <AssemblyName>Yamon.Module.Doc.Web.Controllers.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc">
+      <HintPath>..\..\packages\RazorGenerator.Mvc.2.4.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.Common">
+      <HintPath>..\..\..\Lib\Yamon.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DAL">
+      <HintPath>..\..\..\Lib\Yamon.Framework.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.Log4Net, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Yamon.Framework.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.MVC">
+      <HintPath>..\..\Modules\Yamon.Framework.MVC.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.NPOI">
+      <HintPath>..\..\..\Lib\Yamon.Framework.NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.Common">
+      <HintPath>..\..\..\Lib\Yamon.Module.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.DAL">
+      <HintPath>..\..\Modules\Yamon.Module.SiteManage.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.Entity">
+      <HintPath>..\..\Modules\Yamon.Module.SiteManage.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.DAL">
+      <HintPath>..\..\Modules\Yamon.Module.UCenter.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.Entity">
+      <HintPath>..\..\Modules\Yamon.Module.UCenter.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Doc\Views\web.config" />
+    <Content Include="Areas\Doc\Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocCatalog\_\Create.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Create.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocCatalog\_\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocCatalog\_\Show.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Show.generated.cs</LastGenOutput>
+    </Content>
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_FormHtml.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_FormHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_FormJs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_FormJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_GridHtml.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GridHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_GridJs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GridJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_ViewHtml.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ViewHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\Extend\Model_ViewJs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ViewJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\_\Create.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Create.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\_\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\_\Show.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Show.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocCatalog\_\TreeGrid.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeGrid.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_FormHtml1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_FormHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_FormJs1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_FormJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_GridHtml1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GridHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_GridJs1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_GridJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_ViewHtml1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ViewHtml.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\Extend\Model_ViewJs1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_ViewJs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\_\Create.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Create.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\_\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\_\Grid1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grid1.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\DocInformationView\_\Show.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Show.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Doc\Views\_ViewStart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ViewStart.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DocCatalogController.cs" />
+    <Compile Include="Controllers\_\_DocCatalogController.cs" />
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_GridHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_GridHtml1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_GridJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_GridJs1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocInformationView\_\Grid1.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Grid1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_FormHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_FormHtml1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_FormJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_FormJs1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocInformationView\_\Create.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Create.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocInformationView\_\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_ViewHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_ViewHtml1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="D:\PleaseRememberToSmile\EffortsToFindAJobTomorrow\Meeting2017\Source\Doc\Yamon.Module.Doc.Web\Areas\Doc\Views\DocInformationView\Extend\Model_ViewJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_ViewJs1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocInformationView\_\Show.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Show.generated.cs</LastGenOutput>
+    </Content>
+    <Compile Include="Controllers\DocInformationViewController.cs" />
+    <Compile Include="Controllers\_\_DocInformationViewController.cs" />
+    <Content Include="Areas\Doc\Views\DocCatalog\_\TreeGrid.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>TreeGrid.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Doc\Views\DocCatalog\_\EditTree.cshtml" />
+<Content Include="Areas\Doc\Views\DocInformationView\_\EditGrid.cshtml" />
+<Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DocAreaRegistration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_FormHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_FormHtml.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_FormJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_FormJs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_GridHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_GridHtml.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_GridJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_GridJs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_ViewHtml.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_ViewHtml.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Doc\Views\DocCatalog\Extend\Model_ViewJs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Model_ViewJs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yamon.Module.Doc.DAL\Yamon.Module.Doc.DAL.csproj">
+      <Project>{4cb5192b-3577-4c97-b38c-42ab1b0c399d}</Project>
+      <Name>Yamon.Module.Doc.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yamon.Module.Doc.Entity\Yamon.Module.Doc.Entity.csproj">
+      <Project>{06a70423-dbe3-4941-a074-329b93eb23fd}</Project>
+      <Name>Yamon.Module.Doc.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

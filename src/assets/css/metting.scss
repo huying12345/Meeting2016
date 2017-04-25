@@ -1,0 +1,406 @@
+#Gongzuo,
+#contact,
+#conventioner,
+#grouplist,
+#metting9,
+#programme {
+    width: 100%;
+    height: 100%;
+    .headerbar {
+        background: #FFFFFF none repeat scroll 0 0;
+        box-sizing: border-box;
+        height: 60px;
+        left: 0;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        padding-top: 5px;
+        .back {
+            -moz-box-align: center;
+            -moz-box-orient: horizontal;
+            -moz-box-pack: center;
+            color: #000000;
+            display: -webkit-box;
+            font-size: 14px;
+            height: 50px;
+            left: 0;
+            line-height: 52px;
+            padding-left: 12px;
+            position: absolute;
+            top: 5;
+            width: 200px;
+            span {
+                border-bottom: 1px solid #000000;
+                border-right: 1px solid #000000;
+                display: block;
+                height: 14px;
+                left: 14px;
+                margin: 0 auto;
+                position: absolute;
+                top: 22px;
+                transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                /* IE 9 */
+                -moz-transform: rotate(135deg);
+                /* Firefox */
+                -webkit-transform: rotate(135deg);
+                /* Safari 和 Chrome */
+                -o-transform: rotate(135deg);
+                /* Opera */
+                width: 14px;
+            }
+        }
+    }
+    .footbar {
+        background: none !important;
+        border-top: none !important;
+        box-sizing: border-box;
+        height: 38px;
+        left: 0;
+        padding: 0 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+        .back {
+            -moz-box-align: center;
+            -moz-box-orient: horizontal;
+            -moz-box-pack: center;
+            color: white;
+            display: -webkit-box;
+            font-size: 14px;
+            height: 50px;
+            left: 44%;
+            line-height: 52px;
+            padding-left: 12px;
+            position: absolute;
+            top: 0;
+            width: 25px;
+            span {
+                line-height: 14px;
+                border-bottom: 1px solid white;
+                border-left: 1px solid white;
+                display: block;
+                height: 14px;
+                left: 14px;
+                margin-top: 15px;
+                position: absolute;
+                top: 18x;
+                transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                /* IE 9 */
+                -moz-transform: rotate(135deg);
+                /* Firefox */
+                -webkit-transform: rotate(135deg);
+                /* Safari 和 Chrome */
+                -o-transform: rotate(135deg);
+                /* Opera */
+                width: 14px;
+            }
+        }
+        h4 {
+            color: #fff;
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            text-align: right;
+            width: 100%;
+        }
+    }
+}
+#Gongzuo {
+    color: white;
+    h1 {
+        color: black;
+        font-size: 14px;
+        line-height: 60px;
+    }
+    .weui_tab_bd img {
+        height: 100%;
+        width: 100%;
+    }
+}
+#contact {
+    //  background:#F0F0F2 ;
+    h1 {
+        font-size: 14px;
+        line-height: 60px;
+    }
+    ul {
+        li {
+            border: 1px solid white;
+        }
+    }
+    .weui_media_box::before {
+        border-top: none;
+    }
+    .weui_panel::before {
+        border-top: none;
+    }
+    .weui_panel::after {
+        border-bottom: none;
+    }
+    .weui_media_box.weui_media_appmsg .weui_media_hd {
+        width: 30px;
+    }
+    .weui_media_box .weui_media_desc {
+        border: 1px solid #AAAAAA;
+        color: black;
+        padding: 10px;
+        width: 80%;
+        -moz-border-radius: 15px;
+        /* Gecko browsers */
+        -webkit-border-radius: 15px;
+        /* Webkit browsers */
+        border-radius: 15px;
+        /* W3C syntax */
+    }
+    .weui_media_hd {
+        .iconfont {
+            font-size: 36px;
+        }
+    }
+}
+#metting {
+    background-image: url("/assets/img/c1.jpg");
+    background-size: 100% 100%;
+    .transparentmask {
+        height: 100%;
+    }
+    .footbar {
+        background: none !important;
+        border-top: none !important;
+    }
+    .div1 {
+        left: 10%;
+        position: absolute;
+        top: 10%;
+        width: 80%;
+        text-align: center;
+        color: white;
+        height: 80%;
+        .iconfont {
+            font-size: 3rem;
+        }
+    }
+}
+#metting1 {
+    background-image: url("../img/ab1.jpg");
+    .footbar {
+        background: #FAE2C5;
+    }
+    .d1 {
+        color: white;
+        text-align: center;
+        padding: 20px 0 10px;
+        font-size: 0.7rem;
+    }
+    table {
+        margin-left: 3px;
+        margin-right: 5px;
+        color: #FFFFFF;
+        background-image: url("../img/r1_c1522.png");
+        border-collapse: collapse;
+        /* 边框合并属性  */
+        width: 98%;
+        font-size: 0.58rem;
+        text-align: center;
+        //padding: 0 15px; 
+        height: 80%;
+    }
+    th {
+        border: 2px solid #FB8C00;
+        background: orange;
+        height: 50px;
+    }
+    td {
+        border: 2px solid #54616b;
+    }
+}
+#metting2 {
+    background-image: url("../img/ab1.jpg");
+    background-size: 100% 100%;
+    font-size: 16px;
+    line-height: 19px;
+    .d1 {
+        color: white;
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+    .weui_tab {
+        height: 84% !important;
+    }
+    .weui_navbar_item {
+        padding: 11px 0;
+    }
+    //  .weui_navbar + .weui_tab_bd {
+    //      padding-top: 30px !important;
+    //  }
+    .weui_navbar_item.weui_bar_item_on {
+        background-color: orange;
+    }
+    table {
+        text-align: center;
+        height: 72%;
+    }
+}
+#metting1,
+#metting2 {
+    width: 100%;
+    height: 100%;
+}
+#metting3,
+#metting4,
+#metting5,
+#metting6,
+#metting7 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/ab1.jpg");
+    .d1 {
+        color: white;
+        text-align: center;
+        padding: 20px 0 10px;
+        line-height: 25px;
+    }
+    table {
+        border-collapse: collapse;
+        /* 边框合并属性  */
+        width: 100%;
+        height: 80%;
+        background-image: url("../img/r1_c1522.png");
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 0 5px;
+        line-height: 20px;
+    }
+    th {
+        background: orange;
+        border: 1px solid #666666;
+        height: 40px;
+    }
+    td {
+        border: 1px solid #666666;
+    }
+}
+#metting6 {
+    //  padding: 0 10px;
+    .weui-col-20 {
+        border: 1px solid #54616B;
+        margin-top: 10px;
+        text-align: center;
+        background-image: url("../img/r1_c1522.png");
+    }
+    .weui-col-80 {
+        border: 1px solid #54616B;
+        margin-top: 10px;
+        padding-left: 10px;
+        background-image: url("../img/r1_c1522.png");
+    }
+    table {
+        width: 100%;
+        height: 80%;
+        text-align: left;
+        td {
+            padding-left: 10px;
+        }
+        .td1 {
+            text-align: center;
+            padding-left: 0;
+            width: 80px;
+        }
+    }
+}
+#conventioner {
+    color: white;
+    //  background-image: url("../img/ab1.jpg");
+    font-size: 14px;
+    h1 {
+        font-size: 15px;
+        line-height: 60px;
+        color: black;
+    }
+    .weui_tab {
+        height: 100%;
+    }
+    .weui_tab_bd {
+        .weui_tab_bd_item {
+            height: 100%;
+            //          padding-left: 5px;
+            //          padding-right: 5px;
+            .title {
+                text-align: center;
+                margin: 10px 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        table {
+            background-image: url("../img/r1_c1522.png");
+            border-collapse: collapse;
+            /* 边框合并属性  */
+            width: 100%;
+            height: 400px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        th {
+            border: 1px solid #666666;
+            background: orange;
+            height: 50px;
+        }
+        td {
+            border: 1px solid #666666;
+        }
+    }
+}
+#grouplist {
+    #swiper-container2{
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+         .swiper-slide {
+        border-right: 1px solid #999999;
+        }
+        .active-nav {
+            background: orange;
+        }
+    }
+    #swiper-container3{
+        height: 95%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+#programme {
+    h1 {
+        font-size: 15px;
+        line-height: 60px;
+    }
+}
+
+#metting9 {
+    color: white;
+    table {
+        color: white;
+    }
+}
+#metting7 {
+    height: 100%;
+    text-align: center;
+    a {
+        color: white;
+    }
+    img {
+        width: 100px;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+}

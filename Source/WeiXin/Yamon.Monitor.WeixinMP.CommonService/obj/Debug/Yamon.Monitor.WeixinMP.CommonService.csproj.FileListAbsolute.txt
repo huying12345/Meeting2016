@@ -1,0 +1,14 @@
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Monitor.WeixinMP.CommonService.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Monitor.WeixinMP.CommonService.pdb
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Senparc.Weixin.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Senparc.Weixin.MP.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Senparc.Weixin.Open.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Senparc.Weixin.QY.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Framework.Common.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Framework.DAL.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Framework.DBUtility.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\Yamon.Framework.Log4Net.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\bin\Debug\log4net.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\obj\Debug\Yamon.Monitor.WeixinMP.CommonService.csprojResolveAssemblyReference.cache
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\obj\Debug\Yamon.Monitor.WeixinMP.CommonService.dll
+D:\git\Meeting2016\Source\WeiXin\Yamon.Monitor.WeixinMP.CommonService\obj\Debug\Yamon.Monitor.WeixinMP.CommonService.pdb

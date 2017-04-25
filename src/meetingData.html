@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>会议文件</title>
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="stylesheet" href="./assets/css/meetingNew.css">
+		<style type="text/css">
+			
+			.icon-ppt1{
+				color: #FDAB29;
+			}  .icon-pdf1{
+				color: #F46D44;
+			}  .icon-word{
+				color: #08aeff;
+			}
+		</style>
+	</head>
+
+	<body ontouchstart>
+		<div class="weui_tab" id="Data">
+			<div class="weui_tab_bd">
+				<div class="weui_navbar">
+					<a href="#tab1" class="weui_navbar_item weui_bar_item_on">
+						会议文件
+					</a>
+					<a href="#tab2" class="weui_navbar_item">
+						参阅材料
+					</a>
+				</div>
+				<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+					<!--ko if: InfoList().length==0-->
+					<img src="UploadFiles/2017/01/06/20170106.jpg" name="pb1" class="pb1" style="width:100%;height:100%;">
+					<!--/ko-->
+					<div class="weui_cells" style="margin-top: 60px;">
+
+						<!--ko foreach: InfoList-->
+						<a class="weui_cell show-actions" data-bind="attr:{href1:FilePath}" href="javascript:;">
+							<div class="weui_cell_hd">
+							<i data-bind="attr:{class:geticonfont(FilePath)}"  style="font-size: 1.8rem;"></i>
+							</div>&nbsp;&nbsp;
+							<div class="weui_cell_bd weui_cell_primary">
+								<span data-bind="text:Title"></span>
+							</div>
+							<div class="weui_cell_ft">
+								<i class="iconfont icon-xiala "></i>
+							</div>
+						</a>
+						<!--/ko-->
+					</div>
+				</div>
+				<div id="tab2" class="weui_tab_bd_item">
+					<!--ko if: InfoList().length==0-->
+					<img src="UploadFiles/2017/01/06/20170106.jpg" name="pb1" class="pb1" style="width:100%;height:100%;">
+					<!--/ko-->
+					<div class="weui_cells" style="margin-top: 60px;">
+
+						<!--ko foreach: InfoList-->
+						<a class="weui_cell show-actions" data-bind="attr:{href1:FilePath}" href="javascript:;">
+							<div class="weui_cell_hd">
+
+							<i data-bind="attr:{class:geticonfont(FilePath)}"  style="font-size: 1.8rem;"></i>
+							
+							</div>&nbsp;&nbsp;
+							<div class="weui_cell_bd weui_cell_primary">
+								<span data-bind="text:Title"></span>
+							</div>
+							<div class="weui_cell_ft">
+								<i class="iconfont icon-xiala "></i>
+							</div>
+						</a>
+						<!--/ko-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<link rel="import" href="include/footjs.html?__inline">
+		<script type="text/javascript">
+			$(function() {
+				var newViewModel = new NewViewModel();
+				ko.applyBindings(newViewModel, document.getElementById("tab1"));
+				newViewModel.init("2");
+
+				var newViewModel = new NewViewModel();
+				ko.applyBindings(newViewModel, document.getElementById("tab2"));
+				newViewModel.init("4");
+			});
+			$(document).on("click", ".show-actions", function() {
+				var thisobj = $(this);
+				$.actions({
+					title: "选择操作",
+					onClose: function() {
+						console.log("close");
+					},
+					actions: [{
+						text: "预览",
+						className: "color-primary",
+						onClick: function() {
+							var url = thisobj.attr("href1");
+							if(url.indexOf('.docx') != -1) {
+								url = url.replace('.docx', '.pdf')
+							} else if(url.indexOf('.doc') != -1) {
+								url = url.replace('.doc', '.pdf')
+							}
+							if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+								window.location.href = url;
+							} else {
+								window.location.href = "viewer2.html?file=" + encodeURI(url);
+							}
+						}
+					}, {
+						text: "下载",
+						className: "color-warning",
+						onClick: function() {
+							if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+								window.alert("因苹果手机系统不支持下载功能，仅可在线查看，请到电脑版微信端下载");
+							} else {
+								window.location.href = thisobj.attr("href1");
+							}
+						}
+					}]
+				});
+			});
+			function geticonfont(o){
+				var a="iconfont icon-pdf1"
+				var pos=o.lastIndexOf(".");//查找最后一个\的位置
+    			var i=o.substring(pos+1); //截取最后一个\位置到字符长度，也就是截取文件名 
+				if(i=="pdf"){
+					a+="iconfont icon-pdf1";
+				}else if(i=="ppt"){
+					a+="iconfont icon-ppt1";
+				}else if(i=="doc"||i=="docx"){
+					a+="iconfont icon-word";
+				}return a;
+			}
+		</script>
+	</body>
+
+</html>

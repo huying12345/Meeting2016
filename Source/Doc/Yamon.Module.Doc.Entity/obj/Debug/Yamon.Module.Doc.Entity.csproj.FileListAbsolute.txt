@@ -1,0 +1,8 @@
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\bin\Debug\Yamon.Module.Doc.Entity.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\bin\Debug\Yamon.Module.Doc.Entity.pdb
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\bin\Debug\Newtonsoft.Json.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\bin\Debug\Yamon.Framework.Common.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\bin\Debug\Newtonsoft.Json.xml
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\obj\Debug\Yamon.Module.Doc.Entity.csprojResolveAssemblyReference.cache
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\obj\Debug\Yamon.Module.Doc.Entity.dll
+D:\git\Meeting2016\Source\Doc\Yamon.Module.Doc.Entity\obj\Debug\Yamon.Module.Doc.Entity.pdb

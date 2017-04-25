@@ -1,0 +1,289 @@
+#Inform,
+#weather,
+#Arrangement,
+#seat,
+#New,
+#Data,
+#synopsis {
+    .headerbar {
+        background: #FFFFFF none repeat scroll 0 0;
+        box-sizing: border-box;
+        height: 40px;
+        left: 0;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        padding-top: 5px;
+        h1 {
+            font-size: 15px;
+            line-height: 60px;
+        }
+        .back {
+            -moz-box-align: center;
+            -moz-box-orient: horizontal;
+            -moz-box-pack: center;
+            color: #000000;
+            display: -webkit-box;
+            font-size: 14px;
+            height: 30px;
+            left: 0;
+            line-height: 30px;
+            padding-left: 12px;
+            position: absolute;
+            top: 5;
+            width: 30px;
+            span {
+                border-bottom: 1px solid #000000;
+                border-right: 1px solid #000000;
+                display: block;
+                height: 14px;
+                left: 14px;
+                margin: 0 auto;
+                position: absolute;
+                top: 10px;
+                transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -webkit-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                width: 14px;
+            }
+        }
+    }
+}
+html,
+body {
+    height: 100%;
+}
+header {
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    position: fixed;
+    background: #fff;
+    z-index: 999;
+    box-sizing: border-box;
+    border-bottom: 1px solid #888888;
+    padding-top: 10px;
+    span {
+        font-size: 18px;
+        line-height: 60px;
+        font-weight: 700;
+    }
+    .pull-left {
+        float: left;
+        padding-left: 10px;
+        padding-top: 6px;
+        i {
+            font-size: 30px;
+        }
+    }
+}
+ul {
+    display: inline-block;
+    list-style: none;
+}
+.weui_tab {
+    height: auto;
+}
+#New,
+#Inform,
+#Data {
+    width: 100%;
+    height: 100%;
+    .content {
+        background-color: #F8F7F8;
+        height: 100%;
+        .weui_cells {
+            background-color: #F8F7F8;
+            border-top: 1px solid #F8F7F8;
+            p,
+            span {
+                font-size: 14px;
+            }
+            img {
+                width: 100%;
+            }
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+}
+#New {
+    .weui_panel_hd{
+        padding: 5px 15px;
+    }
+    .weui_panel_bd{
+        margin-top: -20px;
+    }
+    .weui_media_box{
+        padding: 0 5px;
+    }
+}
+#Inform {
+    height: 100%;
+    .weui_search_bar {
+        background-color: #CFDDE4;
+        //      margin-top: 30px;
+    }
+    .lastNew {
+        i {
+            color: #31EA24;
+            font-size: 25px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+    .weui_search_outer {
+        border-radius: 5px;
+    }
+    .weui_cells {
+        border-bottom: 1px solid #BBBBBB;
+        margin-top: 0;
+        .weui_cell_bd {
+            p {
+                color: #000;
+                i {
+                    font-size: 20px;
+                }
+                .icon-dingwei {
+                    color: #5DE8F7;
+                }
+                .icon-circle {
+                    color: red;
+                }
+            }
+        }
+    }
+    .weui_cell {
+        border-bottom: 1px solid #BBBBBB;
+    }
+    .weui_cell_ft {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom: 1px solid #888888;
+        padding-bottom: 12px;
+    }
+}
+#Data {
+    height: 100%;
+    .weui_navbar_item.weui_bar_item_on {
+        background: #F1F3F4;
+    }
+    .weui_navbar {
+        //      margin-top: 60px;
+    }
+    .weui_tab_bd {
+        color: #000;
+        height: 100%;
+        background-size: cover;
+        background-color: #F1F3F4;
+        ul {
+            width: 90%;
+            margin-left: 5%;
+            list-style: none;
+            i {
+                margin-right: 20px;
+                font-size: 25px;
+            }
+            .icon-xiala {
+                float: right;
+            }
+            .icon-wps1160629easyiconnet {
+                font-size: 28px;
+            }
+            li {
+                border-bottom: 1px solid #888888;
+                padding: 5px 0;
+            }
+            a {
+                color: #000;
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    #tab1,
+    #tab2 {
+        margin-top: -10px;
+    }
+}
+#Notice {
+    width: 100%;
+    height: auto;
+    .content {
+        background: url(../img/ab2.png)50% no-repeat;
+        color: #fff;
+        .title {
+            width: 100%;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            i {
+                font-size: 30px;
+                padding-left: 10px;
+                color: yellow;
+            }
+        }
+    }
+    table,
+    tbody,
+    tr {
+        width: 100%;
+        height: 100%;
+        td {
+            background: rgba(42, 36, 36, 0.42);
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+        }
+    }
+}
+#Inform1 {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    .informcontent {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        .title {
+            width: 100%;
+            i {
+                font-size: 25px;
+                margin-left: 10px;
+            }
+            .icon-shou {
+                color: #d81e06;
+            }
+            .icon-shanghaiqixiangjulogo {
+                color: green;
+            }
+        }
+    }
+}
+.weui_tabbar {
+    position: fixed;
+}
+#synopsis {
+    .swiper-container {
+        height: 50px;
+    }
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0 !important;
+    }
+    .weui_navbar_item {
+        padding: 0 !important;
+        flex: none !important;
+    }
+}

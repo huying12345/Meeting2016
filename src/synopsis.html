@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="import" href="include/head.html?__inline">
+		<link href="./assets/css/air_quality.css" rel="stylesheet" />
+		<script src="./assets/libs/jquery/2x/jquery.min.js"></script>
+		<title>主办简介</title>
+		<style type="text/css">
+			.swiper-slide img {
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		var MinTemp = new Array();
+		var MaxTemp = new Array();
+		$(function() {
+				var profileViewModel = new ProfileViewModel();
+				ko.applyBindings(profileViewModel, document.getElementById("weather"));
+				profileViewModel.init();
+				var programmeViewModel = new ProgrammeViewModel();
+				ko.applyBindings(programmeViewModel, document.getElementById("host"));
+				programmeViewModel.init("19");
+				var mySwiper = new Swiper('#citySwiper', {
+				freeMode: false,
+				slidesPerView: 1,
+				observer: true,
+				observeParents: true,
+				paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true
+			});
+				window.onload = function() {
+					
+					show();
+
+				}
+
+			}
+
+		);
+
+		function GetWeek() {
+			var a = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+			var week = new Date().getDay();
+			return a[week];
+		}
+	</script>
+
+	<body ontouchstart>
+		<div class="weui_tab" id="hostProfile" style="height:100%;">
+			<div class="weui_tab_bd" style="padding-bottom:0px;">
+				<div class="swiper-container container3" id="synopsis">
+					<div class="swiper-wrapper weui_navbar">
+						<a class="weui_navbar_item swiper-slide weui_bar_item_on active_on" href="#tab1">天气预报 </a>
+						<a class="weui_navbar_item swiper-slide" href="#tab2">上海市气象局 </a>
+						<a class="weui_navbar_item swiper-slide" href="#tab3">酒店简介 </a>
+						<a class="weui_navbar_item swiper-slide" href="#tab5">附近旅游 </a>
+						<a class="weui_navbar_item swiper-slide" href="#tab4">附近交通 </a>
+					</div>
+				</div>
+				<div class=" hostProfile" style="height: 94%;">
+					<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+						<link rel="import" href="hostProfile0.html?__inline" />
+					</div>
+					<div id="tab2" name="tab2" class="weui_tab_bd_item">
+						<link rel="import" href="hostProfile.html?__inline" />
+					</div>
+					<div id="tab3" class="weui_tab_bd_item">
+						<link rel="import" href="hostProfile1.html?__inline" />
+					</div>
+					<div id="tab5" class="weui_tab_bd_item">
+						<link rel="import" href="hostProfile2.html?__inline" />
+					</div>
+					<div id="tab4" class="weui_tab_bd_item">
+						<link rel="import" href="hostProfile3.1.html?__inline" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<link rel="import" href="include/footjs.html?__inline">
+		<script src="./assets/js/imgPerview.js?201710666"></script>
+		<script>
+			var swiper = new Swiper('.container3', {
+				slidesPerView: 3.3,
+				paginationClickable: true,
+				freeMode: true
+			});
+			
+			$('#synopsis a').click(function() {
+				//				var id = $('.weui_tab_bd_item').eq($(this).index()).find('.weui_tab_bd').attr('id');
+
+				$(this).addClass('active_on').siblings().removeClass('active_on');
+			});
+			$("#footer a.weui_tabbar_item").each(function() {
+				if($(this).text() == $.cookie('__isfooter')) {
+					$(this).addClass("_isfooter");
+				}
+			});
+
+			function show() {
+				var box = document.getElementById("hostText");
+				var text = box.innerHTML;
+				var newBox = document.createElement("span");
+				var btn = document.createElement("a");
+				newBox.innerHTML = text.substring(0, 100);
+				btn.innerHTML = text.length > 100 ? "...显示全部" : "";
+				btn.href = "###";
+
+				btn.onclick = function() {
+					if(btn.innerHTML == "...显示全部") {
+						btn.innerHTML = "收起";
+						newBox.innerHTML = text;
+					} else {
+						btn.innerHTML = "...显示全部";
+						newBox.innerHTML = text.substring(0, 100);
+					}
+				}
+				box.innerHTML = "";
+				box.appendChild(newBox);
+				box.appendChild(btn);
+			}
+		</script>
+	</body>
+
+</html>

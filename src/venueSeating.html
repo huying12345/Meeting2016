@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>会场座位</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=10.0; minimum-scale=1.0;" />
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="import" href="include/footjs.html?__inline">
+	</head>
+
+	<body ontouchstart>
+		<div class="weui_tab" id="seat" style="height:100%;">
+			<div class="weui_tab_bd" style="background: none;position: relative;height: 100%;">
+				<div class="swiper-container" style="height: 100%;width: 100%;z-index: 0;">
+					<div class="swiper-wrapper">
+						<!--ko foreach: list-->
+						<!--ko foreach: FileList.split("|") -->
+						<div class="swiper-slide ">
+							<img data-bind="attr:{src:$data.trim()}" name="pb1" class="pb1" style="width:100%;height:100%;" />
+						</div>
+						<!--/ko-->
+						<!--/ko-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="http://jqweui.com/dist/js/swiper.js"></script>
+			<script>
+				$(function() {
+					var programmeViewModel = new ProgrammeViewModel();
+					ko.applyBindings(programmeViewModel, document.getElementById("Gongzuo"));
+					programmeViewModel.init("12");
+				});
+			</script>
+	</body>
+
+</html>

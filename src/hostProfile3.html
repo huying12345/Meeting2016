@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>上海交通</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+		<link rel="import" href="include/head.html?__inline">
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0?v=1.0" />
+	</head>
+	<style>
+		body,
+		#mapContainer {
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			font-size: 12px;
+		}
+	</style>
+	<body onload="init()">
+		<div class="weui_tab" id="hostProfile">
+		</div>
+		<div class="weui_tab_bd" id="mapContainer"></div>
+		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=f7de3b3977b318e829c3202732e8ee9a&plugin=AMap.ToolBar"></script>
+		<script>
+			function init() {
+				map = new AMap.Map("mapContainer", {
+					zoom: 18,
+					center: [121.138533, 31.150822]
+				});
+				marker = new AMap.Marker({
+					map: map,
+					position: [121.138533, 31.150822]
+				})
+				map.addControl(new AMap.ToolBar());
+				if(AMap.UA.mobile) {
+					document.getElementById('button_group').style.display = 'none';
+				}
+			}
+		</script>
+	</body>
+</html>

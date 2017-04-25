@@ -1,0 +1,148 @@
+<div class="weui_tab_bd" id="weather">
+	<div class="loactionWeather">
+		<!--ko foreach: stationData -->
+		<div class="name">上海
+			<span data-bind="text:Station_Name"></span><br/>
+			<span data-bind="text:GetWeek()"></span>
+		</div>
+		<div class="weather">
+			<ul class="weatherChild1">
+				<li>
+					<i id="weather_icon" style="font-size: 2.2rem"></i>
+				</li>
+				<li>
+					<span data-bind="text:TEM"></span>°
+				</li>
+			</ul>
+			<ul class="weatherChild2">
+				<li>
+					<span data-bind="text:Datetime"></span>
+				</li>
+				<li>
+					湿度：
+					<span data-bind="text:RHU"></span>
+				</li>
+				<li>
+					<span data-bind="text:WIN_D_Avg_1mi"></span>&nbsp;&nbsp;
+					<span data-bind="text:WIN_S_Avg_1mi"></span>
+				</li>
+				<li>
+					气压：
+					<span data-bind="text:PRS"></span>
+				</li>
+				<li>
+					能见度：
+					<span data-bind="text:(VIS_HOR_1MI/1000).toFixed(2)"></span>KM
+				</li>
+				<li id="AQI" class="AQI" onclick="javascript:window.location.href = '02.html';">
+					AQI
+					<span id="GradeText"  ></span>
+				</li>
+				<li id="PM" class="PM" onclick="javascript:window.location.href = '02.html';">
+					<p></p>
+					PM2.5
+					<span ></span>
+				</li>
+			</ul>
+		</div>
+		<!--/ko-->
+	</div>
+	<div class="todayWeather">
+		<ul>
+			<li>整点预报</li>
+		</ul>
+		<div class="swiper-container" id="weatherSwiper">
+			<div class="swiper-wrapper">
+				<!--ko foreach: hourWeatherForecast -->
+				<!--ko if: $index()==0 -->
+				<div class="swiper-slide swiper-slide-active" style="width: 91px;">
+					<span>&nbsp;</span>
+					<span data-bind="text:Hour"></span>
+					<br>
+					<span>&nbsp;</span>
+					<i data-bind="attr:{class:'iconfont icon-weather-'+WeatherPY1}"></i>
+					<br>
+					<span data-bind="text:Weather.length>12?Weather.substring(0,12):Weather" style=" height: 35px; line-height: 17px; display: block;"></span>
+					<span class="font">湿度</span>
+					<span data-bind="text:RelativeHumidity"></span>
+					<br>
+					<span class="font">温度</span>
+					<span data-bind="text:Temp"></span>
+					<br>
+					<span class="font">风力</span>
+					<span data-bind="text:WindLevel"></span>
+					<br>
+					<span class="font">风速</span>
+					<span data-bind="text:WindSpeed"></span>m/s
+				</div>
+				<!--/ko-->
+				<!--ko if: $index()>0 -->
+				<div class="swiper-slide swiper-slide-next" style="width: 91px;">
+					<span data-bind="text:Hour"></span>
+					<br>
+					<i data-bind="attr:{class:'iconfont icon-weather-'+WeatherPY1}"></i>
+					<br>
+					<span data-bind="text:Weather.length>12?Weather.substring(0,12):Weather" style=" height: 35px; line-height: 17px; display: block;"></span>
+					<span data-bind="text:RelativeHumidity"></span>
+					<br><span data-bind="text:Temp"></span>
+					<br><span data-bind="text:WindLevel"></span>
+					<br><span data-bind="text:WindSpeed"></span>m/s
+				</div>
+				<!--/ko-->
+				<!--/ko-->
+			</div>
+			
+		</div>
+	</div>
+	<div class="weekWeather">
+		<ul>
+			<li>五天天气预报</li>
+		</ul>
+		<table border="0" cellspacing="0" cellpadding="0" id="weekweather_table" >
+			<tr data-bind="foreach: soWeatherData">
+				<td data-bind="text:Week" style="width: 20%;"></td>
+			</tr>
+			<tr data-bind="foreach: soWeatherData">
+				<td data-bind="text:ForeTimeText" style="width: 20%;"></td>
+			</tr>
+			<tr data-bind="foreach: soWeatherData">
+				<td style="width: 20%;">
+					<i data-bind="attr:{class:'iconfont icon-weather-'+WeatherPY1}" ></i>
+				</td>
+			</tr>
+			<tr data-bind="foreach: soWeatherData">
+				<td data-bind="text:TextWeather" style=" width: 20%;"></td>
+			</tr>
+		</table>
+		<div id="Echarts" style="width:100%;height:155px">
+			<!--曲线图-->
+		</div>
+		<table border="0" cellspacing="0" cellpadding="0" id="weekweather_table2">
+			<tr data-bind="foreach: soWeatherData">
+				<td data-bind="text:WindDirection"  style=" width: 20%;"></td>
+			</tr>
+		</table>
+		<span style="text-align: right;">上海市公共气象服务中心提供</span>
+	</div>
+	<div class="shAQI" style="background:rgba(0, 0, 0, 0.3);margin-top:10px;">
+		<link rel="import" href="01.html?__inline" />
+	</div>
+	<div style="height: 120px; line-height: 25px; padding-top: 10px; text-align: center; color: black; font-size: 12px;">
+		<img style="height: 50px;width: 50px; margin-right: 30px;" src="./assets/img/12160431.png" onclick="window.location.href='http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3OTc0NTc4MA==#wechat_redirect'" />
+		<i style="font-size: 2.6rem; color:#007AFF;" class="iconfont icon-shanghaiqixiangjulogo" onclick="window.location.href='http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA5NjA5NTQxNA==#wechat_redirect'"></i>
+		<img style="height: 50px;width: 50px; margin-left: 30px;" src="./assets/img/60437.png" class="EastWeather" />
+		<br/>
+		<a href="http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3OTc0NTc4MA==#wechat_redirect"><span style="margin-right:30px;">上海预警发布</span></a>
+		<a href="http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA5NjA5NTQxNA==#wechat_redirect"><span>上海天气</span></a>
+		<a href="#" class="EastWeather"><span style="margin-left: 30px;">东方天气APP</span></a>
+		<br/>
+		<p>技术支持：上海亚萌数码科技有限公司</p>
+		<div id="popup" class="weui-popup-container  popup-bottom">
+			<div class="weui-popup-overlay"></div>
+			<div class="weui-popup-modal">
+				<p style="color:blue;font-size:16px;padding:5px 0px;">点击此处跳转</p>
+				<p>（请选择“普通下载”）</p>
+			</div>
+		</div>
+	</div>
+</div>

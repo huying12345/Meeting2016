@@ -1,0 +1,338 @@
+#hostProfile {    
+    #synopsis{
+        a{
+          font-size: 0.7rem !important;
+        }
+        height:50px;
+        border-bottom:1px solid #888888;
+        .swiper-slide {
+            font-size: 15px;
+            font-weight:500;
+        }
+        .active_on {
+            color: #04BE02;
+        }
+    }
+    .hostProfile{
+        padding-bottom:0px;
+    }
+    #weather {
+    background: url(../img/weather.jpg)26% 35%;
+    color: #fff;
+    .icon-sun {
+        color: yellow;
+    }
+    .icon-fengxiang {
+        font-size: 20px;
+        color: yellow;
+    }
+    .loactionWeather {
+        width: 100%;
+        position: relative;
+        height: 230px;
+        .name {
+            width: 96%;
+            padding-top: 20px;
+            padding-left: 4%;
+            font-size: 16px;
+        }
+    }
+    .swiper-slide {
+        text-align: center;
+    }
+    .todayWeather {
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        .swiper-slide {
+            font-size: 0.7rem;
+            .font {
+                float: left;
+                font-size: 14px;
+            }
+        }
+        ul {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            height: 35px;
+            li {
+                display: inline-block;
+                padding: 5px;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+    }
+    .weekWeather {
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        margin-top: 10px;
+        ul {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            height: 35px;
+            li {
+                display: inline-block;
+                padding: 5px;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+        table,
+        tbody,
+        tr {
+            width: 100%;
+            padding: 15px 0;
+            line-height: 30px;
+            td {
+                text-align: center;
+                span {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+        #Echarts {
+            margin-top: -30px;
+            margin-bottom: 20px;
+            margin-bottom: -30px;
+        }
+        span {
+            width: 100%;
+            font-size: 12px;
+            display: block;
+        }
+    }
+    iframe .foot{
+        margin:0px!important;
+    }
+}
+    
+    .swiper-slide {
+        .weui_tab_bd {
+            height: 200px;
+        }
+        .weui_tabbar>a {
+            font-size: 13px;
+            display: inline-table;
+        }
+    }
+    .weui_tab_bd {
+        .swiper-slide {
+            img {
+                width: 100%;
+            }
+        }
+        .bottom {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid #888888;
+            width: 90%;
+            margin-left: 5%;
+            p {
+                font-size: 12px;
+                width: 100%;
+                text-align: center;
+                i {
+                    padding: 0 25px;
+                }
+                span {
+                    padding: 0 3px;
+                }
+            }
+        }
+    }
+    #swiper-container1 {
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+}
+#weui_tab_bd1 {
+    p {
+        font-size: 13px;
+        text-indent: 26px;
+        margin: 10px 5px;
+    }
+    #weui_tab_bd2 {
+        margin-top: 15px;
+        .navbar {
+            display: block;
+            width: 15%;
+            z-index: 9999;
+            position: absolute;
+            background: none;
+            text-align: center;
+            display: inline-block;
+            background: #fff;
+            a {
+                width: 100%;
+                display: block;
+                border: 1px solid #888;
+                padding: 8px 0;
+                border-right: none;
+            }
+            .bar_item_on {
+                background: #ccc;
+            }
+        }
+        .tab_bd {
+            width: 100%;
+            float: right;
+            padding: 0;
+            position: relative;
+        }
+     .tab_bd_item{
+         position: absolute;
+         display:none;
+     }   
+    .tab_bd_item_active{
+        display: block;
+        position:relative;
+    }
+        .container2 {
+            width: 100%;
+            height: 100%;
+            overflow-y: initial;
+            .swiper-slide {
+                img {
+                    width: 100%;
+                    height: 176px;
+                }
+            }
+            .text {
+                width: 100%;
+                text-align: left;
+                word-break: break-all;
+            }
+        }
+        i {
+            color: #fff;
+            padding: 5px 6px;
+            border-radius: 50%;
+        }
+        .icon-home {
+            background: #FFA500;
+        }
+        .icon-canyin {
+            background: #238CCB;
+        }
+        .icon-9 {
+            background: #7BE814;
+        }
+        .icon-paobu {
+            background: #33228D;
+        }
+    }
+}
+#weui_tab_bd3 {
+    width: 100%;
+    .weui_cells {
+        margin-top: -5px;
+        width: 100%;
+        .weui_cell_bd {
+            width: 20%;
+            text-align: center;
+            img {
+                width: 100px;
+            }
+            p{
+                text-align: center;
+                font-size: 12px;
+                color: #000;
+            }
+        }
+        .weui_cell_ft {
+            width: 60%;
+        }
+        .weui_cell_ft {
+            p {
+                font-size: 12px;
+                text-align: left;
+                color: #000;
+            }
+        }
+    }
+}
+#weui_tab_bd5 {
+    header,
+    footer {
+        display: none;
+    }
+    .weui_tab_bd {
+        color: #fff;
+        margin-top: -50px;
+        padding-bottom: 0;
+    }
+}
+#weui_tab_bd6{
+    .mapLines{
+        background:rgba(0,0,0,0.4);
+        color: #fff;
+        font-size: 14px;
+        i{
+            color:#FAE127;
+            font-size:25px;
+        }
+        sub{
+            font-weight:400;
+        }
+    }
+   .gj{
+       line-height:28px;
+       p{
+           width: 90%;
+           margin-left:5%;
+       }
+   }
+   .dt{
+       width:95%;
+       height:300px;
+       img{
+           width:100%;
+           margin-left:5%;
+           height:100%;
+       }
+   }
+}
+#host {
+    .swiper-container>.swiper-slide {
+        width: 100%;
+        height: 100%;
+        overflow-x:hidden;
+    }
+    
+}
+
+#travelDetail1,
+#travelDetail2,
+#travelDetail3,
+#travelDetail4,
+#travelDetail5,
+#travelDetail6 {
+    .swiper-slide {
+        img {
+            width: 100%;
+            height: 180px;
+        }
+    }
+    .text {
+        width: 95%;
+        margin-left: 2.5%;
+        h4 {
+            margin: 10px 0;
+        }
+        p {
+            font-size: 13px;
+            line-height: 25px;
+        }
+        .tese {
+            background: orange;
+            padding: 3px 8px;
+            border-radius: 5px;
+            color: #fff;
+            margin-right: 10px;
+        }
+    }
+}
